@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dramatists in Bavaria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+</head>
+<body>
+
+    <header>
+        <img src="image.png" alt="Header Image" class="header-img">
+        <h1>Dramatists in Bavaria</h1>
+    </header>
+
+    <div class="container">
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="Search dramatist by name">
+            <br>
+            <label for="century-filter">Filter by birth date:</label>
+            <select id="century-filter">
+                <option value="all">All</option>
+                <option value="15th">15th century</option>
+                <option value="16th">16th century</option>
+                <option value="17th">17th century</option>
+                <option value="18th">18th century</option>
+                <option value="19th">19th century</option>
+                <option value="20th">20th century</option>
+                <option value="21st">21st century</option>
+                <option value="unspecified">Unspecified date</option>
+            </select>
+            <br><br>
+            <button id="search-button">Search</button> 
+            <br><br>
+            <div id="results">
+                <!-- Search results will appear here -->
+            </div>
+        </div>
+
+        <div class="map-section">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div class="details-section">
+        <div class="person-info">
+            <h2 id="person-name">Name: </h2>
+            <p id="person-dates">Dates: </p>
+            <p id="person-bio">Biography: </p>
+            <a id="wikidata-link" href="" target="_blank">Wikidata</a>
+        </div>
+        <div class="image-section">
+            <img id="person-image" src="" alt="Person Image">
+            <p id="image-metadata"></p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
